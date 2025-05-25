@@ -18,7 +18,7 @@ pipeline {
         
         stage('Run Ansible Playbook') {
             steps {
-                sshagent(['rahma1']) {
+                sshagent(['asible-ssh-key']) {
                     sh 'ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i host.ini deploy.yml || exit 1'
                 }
             }
