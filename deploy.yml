@@ -1,6 +1,7 @@
 - name: Install nginx
   hosts: web
   become: true
+  become_method: sudo
   tasks:
     - name: Update apt cache
       apt:
