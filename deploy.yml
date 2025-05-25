@@ -1,6 +1,6 @@
 - name: Install nginx
   hosts: web
-  become: true
+  become: yes
   tasks:
     - name: Update apt cache
       apt:
